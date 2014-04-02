@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Docz</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- styles -->
+    <!--    JS    -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="http://localhost:3000/te.js"></script>
+    <script src="http://localhost:3000/m.js"></script>
+    <!--    CSS    -->
+    <link href="http://localhost:3000/foundation.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/normalize.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300|Josefin+Slab:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://localhost:3000/te.css">
+    <link rel="stylesheet" href="http://localhost:3000/main.css">
+
+</head>
+
+<div id='pop'></div>
+<nav class='small-12 columns'>
+    <ul>
+        <li class='small-4 columns'>
+            <img style='float: left' src="http://localhost:3000/logo.png" id="logo" />
+            <h2 class='small-8 columns'>Doc Love</h2>
+        </li>
+        <li class='small-2 columns fill'></li>
+        <li class='small-6 columns'>
+            <h2 class='small-10 columns fill'>
+                BOB
+            </h2>
+            <a href='/signout' class='small-2 columns fill lout'>Log Out</a>
+        </li>
+    </ul>
+</nav>
+<aside class="small-3 columns">
+    <ul>
+        <a href="/new"><button id="add">New Note</button></a>
+        <li>
+            <h3 class="small-8 columns">Title</h3>
+            <a href="/delete?id=EVeg">
+                <div class="small-4 columns">
+                    <span class="error">delete</span>
+                </div>
+            </a>
+            <a href="/docz/EVeg">
+                <p class="small-12 columns">Content</p>
+            </a>
+        </li>
+    </ul>
+</aside>
+<section class='app small-9 columns'>
+    <input id='header' type="text" class='small-12 columns' value="<%=doc.header %>" docId="<%=doc.id %>" />
+    <textarea class='small-12 columns'>
+        <%=doc.cont %>
+    </textarea>
+</section>

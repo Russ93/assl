@@ -1,0 +1,198 @@
+/*------------------------- Defaults -------------------------*/
+html, p, label, li{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: #666;
+}
+body{
+	max-width: 1440px;
+	padding-top: 20px;
+	margin: 0 auto;
+}
+h1, h2, h3 , h4, h5, h6, span{
+	font-family: 'Josefin Slab', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 400;
+	color: #4D9379;
+}
+h1{
+	font-size: 3em
+}
+h2{
+	font-size: 2em	
+}
+h3{
+	font-size: 1em
+}
+p{
+	font-size: 1em
+}
+button, input[type="button"], input[type="submit"], input[type="reset"]{
+	text-transform: capitalize;
+	position: relative;
+	vertical-align: top;
+	width: calc(100% - 30px);
+	height: 60px;
+	padding: 15px;
+	font-size: 1.375em;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	background: #27ae60;
+	border: 0;
+	border-bottom: 2px solid #219d55;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 -2px #219d55;
+	box-shadow: inset 0 -2px #219d55;
+}
+button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active{
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.error{
+	color: #E66665 !important;
+	font-family: 'Avenir','Lato',Helvetica, Arial, sans-serif;
+}
+/*------------------------- Landing -------------------------*/
+/*------------------------- Nav -------------------------*/
+nav ul{
+	height: 50px;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+nav ul li{
+	list-style: none;
+}
+.log{
+    cursor: pointer;
+}
+
+/*------------------------- CTA -------------------------*/
+#cta{
+	margin: 0 0 20px 25%;
+	text-align: center;
+}
+#cta span{
+	color: #999;
+	font-size: 1em;
+	margin: 75px 0 5px 0;
+	display: block;
+	float: left;
+}
+input{
+	width: calc(100% - 30px);
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 5px;
+	border: #ccc solid 2px;
+	background: #fff;
+	clear: both;
+}
+input:focus{
+	outline: 0;
+	border: #4D9379 solid 2px;
+}
+#cta h1{
+    margin: 0;
+    margin-bottom: .67em;
+}
+@media (max-width: 625px) {
+    h1{
+        font-size: 2em;
+    }
+}
+/*------------------------- Pop up -------------------------*/
+#out{
+    top: 0;
+    z-index: 3;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+}
+#up{
+    top: 25%;
+    left: 25%;
+    z-index: 4;
+    position: fixed;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+}
+#up * {
+    margin-left: 2%;
+}
+/*------------------------- App -------------------------*/
+.app textarea{
+	border: none;
+	border-top: 1px solid #eee;
+    height: 80%;
+}
+aside p{
+    font-size: 1em;
+    line-height: 1em;
+    max-height: 2.9em;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.fill {
+	text-align: right;
+    height: 100%;
+}
+aside.small-3.columns{
+    height: 85%;
+    padding: 0;
+	float: left;
+	background: #f6f2f1;
+}
+aside ul{
+	height: 100%;
+	overflow-y: scroll;
+}
+aside ul div{
+	float: right;
+}
+aside ul li h3{
+	width: 80%;
+	margin-right: 0;
+	white-space: nowrap;
+}
+aside ul li span{
+	margin: 0 10px;
+	float: right;
+	font-size: .75em;
+	color: #E66665;
+}
+aside ul li{
+	border-bottom: solid 1px #999;
+	padding: 1em 0;
+	list-style: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+#add{
+	padding: 0;
+	height: 36px;
+	width: 100%;
+	font-size: .825em;
+}
+.app input[type="text"]{
+	font-family: 'Josefin Slab', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 400;
+	border: none;
+	color: #4D9379;
+	font-size: 1.5em;
+	width: 100%;
+	margin: 10px 0;
+    padding: 0;
+}
+.lout{
+    margin-top: 15px;
+}
+@media (max-width: 695px){
+    aside ul li p{
+        display: none;
+    }
+}

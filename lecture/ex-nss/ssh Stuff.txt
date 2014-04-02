@@ -1,0 +1,581 @@
+Last login: Thu Mar 13 14:16:38 on ttys000
+You have mail.
+Russells-MacBook-Pro-7:~ russellbenton$ ssh rschlup@192.168.56.3
+ssh: connect to host 192.168.56.3 port 22: Operation timed out
+Russells-MacBook-Pro-7:~ russellbenton$ ssh rschlup@192.168.56.3
+^C
+Russells-MacBook-Pro-7:~ russellbenton$ ssh rschlup@192.168.56.2
+The authenticity of host '192.168.56.2 (192.168.56.2)' can't be established.
+RSA key fingerprint is 6e:b4:05:c4:ce:2e:d4:d7:a6:a6:31:53:28:f0:c6:fa.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added '192.168.56.2' (RSA) to the list of known hosts.
+rschlup@192.168.56.2's password: 
+Welcome to Ubuntu 12.04.4 LTS (GNU/Linux 3.11.0-15-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Mar 14 15:05:36 EDT 2014
+
+  System load:  0.05              Processes:           99
+  Usage of /:   5.6% of 17.34GB   Users logged in:     1
+  Memory usage: 4%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 192.168.56.2
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Fri Mar 14 15:02:13 2014
+rschlup@ubuntu:~$ ls
+rschlup@ubuntu:~$ cd /
+rschlup@ubuntu:/$ ls
+bin   etc         lib         media  proc  sbin     sys  var
+boot  home        lib64       mnt    root  selinux  tmp  vmlinuz
+dev   initrd.img  lost+found  opt    run   srv      usr
+rschlup@ubuntu:/$ sudo apt-get install apache2
+[sudo] password for rschlup: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libcap2 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec apache2-suexec-custom openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
+  libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libcap2
+  ssl-cert
+0 upgraded, 11 newly installed, 0 to remove and 16 not upgraded.
+Need to get 1,867 kB of archives.
+After this operation, 5,738 kB of additional disk space will be used.
+Do you want to continue [Y/n]? y 
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main libcap2 amd64 1:2.22-1ubuntu3 [12.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise/main libapr1 amd64 1.4.6-1 [89.6 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise/main libaprutil1 amd64 1.3.12+dfsg-3 [74.6 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/main libaprutil1-dbd-sqlite3 amd64 1.3.12+dfsg-3 [10.4 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/main libaprutil1-ldap amd64 1.3.12+dfsg-3 [8,044 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2.2-bin amd64 2.2.22-1ubuntu1.4 [1,340 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2-utils amd64 2.2.22-1ubuntu1.4 [90.1 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2.2-common amd64 2.2.22-1ubuntu1.4 [226 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2-mpm-worker amd64 2.2.22-1ubuntu1.4 [2,284 B]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2 amd64 2.2.22-1ubuntu1.4 [1,492 B]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main ssl-cert all 1.0.28ubuntu0.1 [12.3 kB]
+Fetched 1,867 kB in 11s (169 kB/s)                                             
+Preconfiguring packages ...
+Selecting previously unselected package libcap2.
+(Reading database ... 52339 files and directories currently installed.)
+Unpacking libcap2 (from .../libcap2_1%3a2.22-1ubuntu3_amd64.deb) ...
+Selecting previously unselected package libapr1.
+Unpacking libapr1 (from .../libapr1_1.4.6-1_amd64.deb) ...
+Selecting previously unselected package libaprutil1.
+Unpacking libaprutil1 (from .../libaprutil1_1.3.12+dfsg-3_amd64.deb) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3.
+Unpacking libaprutil1-dbd-sqlite3 (from .../libaprutil1-dbd-sqlite3_1.3.12+dfsg-3_amd64.deb) ...
+Selecting previously unselected package libaprutil1-ldap.
+Unpacking libaprutil1-ldap (from .../libaprutil1-ldap_1.3.12+dfsg-3_amd64.deb) ...
+Selecting previously unselected package apache2.2-bin.
+Unpacking apache2.2-bin (from .../apache2.2-bin_2.2.22-1ubuntu1.4_amd64.deb) ...
+Selecting previously unselected package apache2-utils.
+Unpacking apache2-utils (from .../apache2-utils_2.2.22-1ubuntu1.4_amd64.deb) ...
+Selecting previously unselected package apache2.2-common.
+Unpacking apache2.2-common (from .../apache2.2-common_2.2.22-1ubuntu1.4_amd64.deb) ...
+Selecting previously unselected package apache2-mpm-worker.
+Unpacking apache2-mpm-worker (from .../apache2-mpm-worker_2.2.22-1ubuntu1.4_amd64.deb) ...
+Selecting previously unselected package apache2.
+Unpacking apache2 (from .../apache2_2.2.22-1ubuntu1.4_amd64.deb) ...
+Selecting previously unselected package ssl-cert.
+Unpacking ssl-cert (from .../ssl-cert_1.0.28ubuntu0.1_all.deb) ...
+Processing triggers for man-db ...
+Processing triggers for ureadahead ...
+Processing triggers for ufw ...
+Setting up libcap2 (1:2.22-1ubuntu3) ...
+Setting up libapr1 (1.4.6-1) ...
+Setting up libaprutil1 (1.3.12+dfsg-3) ...
+Setting up libaprutil1-dbd-sqlite3 (1.3.12+dfsg-3) ...
+Setting up libaprutil1-ldap (1.3.12+dfsg-3) ...
+Setting up apache2.2-bin (2.2.22-1ubuntu1.4) ...
+Setting up apache2-utils (2.2.22-1ubuntu1.4) ...
+Setting up apache2.2-common (2.2.22-1ubuntu1.4) ...
+Enabling site default.
+Enabling module alias.
+Enabling module autoindex.
+Enabling module dir.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module status.
+Enabling module auth_basic.
+Enabling module deflate.
+Enabling module authz_default.
+Enabling module authz_user.
+Enabling module authz_groupfile.
+Enabling module authn_file.
+Enabling module authz_host.
+Enabling module reqtimeout.
+Setting up apache2-mpm-worker (2.2.22-1ubuntu1.4) ...
+ * Starting web server apache2                                                  apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+Setting up apache2 (2.2.22-1ubuntu1.4) ...
+Setting up ssl-cert (1.0.28ubuntu0.1) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+rschlup@ubuntu:/$ ps ax | grep apache
+ 2608 ?        Ss     0:00 /usr/sbin/apache2 -k start
+ 2610 ?        S      0:00 /usr/sbin/apache2 -k start
+ 2612 ?        Sl     0:00 /usr/sbin/apache2 -k start
+ 2613 ?        Sl     0:00 /usr/sbin/apache2 -k start
+ 2714 pts/0    S+     0:00 grep --color=auto apache
+rschlup@ubuntu:/$ vi /etc/apache2/sites-available/default
+rschlup@ubuntu:/$ sudo mkdir /var/site1
+[sudo] password for rschlup: 
+rschlup@ubuntu:/$ cd /var/site1
+rschlup@ubuntu:/var/site1$ sudo mkdir /var/site2
+rschlup@ubuntu:/var/site1$ cd ../
+rschlup@ubuntu:/var$ ls
+backups  crash  local  log   opt  site1  spool  www
+cache    lib    lock   mail  run  site2  tmp
+rschlup@ubuntu:/var$ sudo chmod 777 /var/site1
+rschlup@ubuntu:/var$ sudo chmod 777 /var/site2
+rschlup@ubuntu:/var$ ls -l
+total 52
+drwxr-xr-x  2 root root     4096 Jan 10 09:34 backups
+drwxr-xr-x  8 root root     4096 Mar 14 15:15 cache
+drwxrwsrwt  2 root whoopsie 4096 Mar 14 14:34 crash
+drwxr-xr-x 33 root root     4096 Mar 14 14:34 lib
+drwxrwsr-x  2 root staff    4096 Jan 10 09:34 local
+lrwxrwxrwx  1 root root        9 Mar 14 14:18 lock -> /run/lock
+drwxr-xr-x 10 root root     4096 Mar 14 15:15 log
+drwxrwsr-x  2 root mail     4096 Mar 14 14:18 mail
+drwxr-xr-x  2 root root     4096 Mar 14 14:18 opt
+lrwxrwxrwx  1 root root        4 Mar 14 14:58 run -> /run
+drwxrwxrwx  2 root root     4096 Mar 14 15:31 site1
+drwxrwxrwx  2 root root     4096 Mar 14 15:31 site2
+drwxr-xr-x  5 root root     4096 Mar 14 14:19 spool
+drwxrwxrwt  2 root root     4096 Jan 10 09:34 tmp
+drwxr-xr-x  2 root root     4096 Mar 14 15:15 www
+rschlup@ubuntu:/var$ sudo vim  site1/index.html
+rschlup@ubuntu:/var$ sudo vim  site2/index.html
+rschlup@ubuntu:/var$ cd site1
+rschlup@ubuntu:/var/site1$ ls
+index.html
+rschlup@ubuntu:/var/site1$ cd ./
+rschlup@ubuntu:/var/site1$ cd ../
+rschlup@ubuntu:/var$ cd /etc/apache2/sites-available/
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo vim samplesites
+rschlup@ubuntu:/etc/apache2/sites-available$ cd ../
+rschlup@ubuntu:/etc/apache2$ cd sites-enabled
+rschlup@ubuntu:/etc/apache2/sites-enabled$ ls
+000-default
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo ln -s ../sites-available/samplesites
+rschlup@ubuntu:/etc/apache2/sites-enabled$ ls -l
+total 0
+lrwxrwxrwx 1 root root 26 Mar 14 15:15 000-default -> ../sites-available/default
+lrwxrwxrwx 1 root root 30 Mar 14 15:52 samplesites -> ../sites-available/samplesites
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo apaches2 reload
+sudo: apaches2: command not found
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo apache2 reload
+Usage: apache2 [-D name] [-d directory] [-f file]
+               [-C "directive"] [-c "directive"]
+               [-k start|restart|graceful|graceful-stop|stop]
+               [-v] [-V] [-h] [-l] [-L] [-t] [-T] [-S] [-X]
+Options:
+  -D name            : define a name for use in <IfDefine name> directives
+  -d directory       : specify an alternate initial ServerRoot
+  -f file            : specify an alternate ServerConfigFile
+  -C "directive"     : process directive before reading config files
+  -c "directive"     : process directive after reading config files
+  -e level           : show startup errors of level (see LogLevel)
+  -E file            : log startup errors to file
+  -v                 : show version number
+  -V                 : show compile settings
+  -h                 : list available command line options (this page)
+  -l                 : list compiled in modules
+  -L                 : list available configuration directives
+  -t -D DUMP_VHOSTS  : show parsed settings (currently only vhost settings)
+  -S                 : a synonym for -t -D DUMP_VHOSTS
+  -t -D DUMP_MODULES : show all loaded modules 
+  -M                 : a synonym for -t -D DUMP_MODULES
+  -t                 : run syntax check for config files
+  -T                 : start without DocumentRoot(s) check
+  -X                 : debug mode (only one worker, do not detach)
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo service apache2 reload
+apache2: Syntax error on line 237 of /etc/apache2/apache2.conf: Syntax error on line 33 of /etc/apache2/sites-enabled/samplesites: </VirtualHost> without matching <VirtualHost> section
+Action 'configtest' failed.
+The Apache error log may have more information.
+   ...fail!
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo service apache2 reload
+apache2: Syntax error on line 237 of /etc/apache2/apache2.conf: Syntax error on line 33 of /etc/apache2/sites-enabled/samplesites: </VirtualHost> without matching <VirtualHost> section
+Action 'configtest' failed.
+The Apache error log may have more information.
+   ...fail!
+rschlup@ubuntu:/etc/apache2/sites-enabled$ ls -l
+total 0
+lrwxrwxrwx 1 root root 26 Mar 14 15:15 000-default -> ../sites-available/default
+lrwxrwxrwx 1 root root 30 Mar 14 15:52 samplesites -> ../sites-available/samplesites
+rschlup@ubuntu:/etc/apache2/sites-enabled$ cd ../
+rschlup@ubuntu:/etc/apache2$ ls
+apache2.conf  envvars     magic           mods-enabled  sites-available
+conf.d        httpd.conf  mods-available  ports.conf    sites-enabled
+rschlup@ubuntu:/etc/apache2$ cd sites-available/
+rschlup@ubuntu:/etc/apache2/sites-available$ cd samplq
+-bash: cd: samplq: No such file or directory
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo vim samplesites 
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/etc/apache2/sites-available$ cd ../
+rschlup@ubuntu:/etc/apache2$ ls
+apache2.conf  envvars     magic           mods-enabled  sites-available
+conf.d        httpd.conf  mods-available  ports.conf    sites-enabled
+rschlup@ubuntu:/etc/apache2$ cd sites-enabled/
+rschlup@ubuntu:/etc/apache2/sites-enabled$ cd ../sites-available/samplesites
+-bash: cd: ../sites-available/samplesites: Not a directory
+rschlup@ubuntu:/etc/apache2/sites-enabled$ cd ../sites-available/
+rschlup@ubuntu:/etc/apache2/sites-available$ ls -l
+total 16
+-rw-r--r-- 1 root root  950 Feb  6  2012 default
+-rw-r--r-- 1 root root 7469 Feb  6  2012 default-ssl
+-rw-r--r-- 1 root root  752 Mar 14 16:00 samplesites
+rschlup@ubuntu:/etc/apache2/sites-available$ cd ../
+rschlup@ubuntu:/etc/apache2$ ls
+apache2.conf  envvars     magic           mods-enabled  sites-available
+conf.d        httpd.conf  mods-available  ports.conf    sites-enabled
+rschlup@ubuntu:/etc/apache2$ cd sites-enabled/
+rschlup@ubuntu:/etc/apache2/sites-enabled$ ls -l
+total 0
+lrwxrwxrwx 1 root root 26 Mar 14 15:15 000-default -> ../sites-available/default
+lrwxrwxrwx 1 root root 30 Mar 14 15:52 samplesites -> ../sites-available/samplesites
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo vim ../sites-available/
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo vim ../sites-available/
+rschlup@ubuntu:/etc/apache2/sites-enabled$ sudo vim ../sites-available/samplesites 
+rschlup@ubuntu:/etc/apache2/sites-enabled$ cd ../
+rschlup@ubuntu:/etc/apache2$ cd sites-available/
+rschlup@ubuntu:/etc/apache2/sites-available$ ls
+default  default-ssl  samplesites
+rschlup@ubuntu:/etc/apache2/sites-available$ rm samplesites 
+rm: remove write-protected regular file `samplesites'? y
+rm: cannot remove `samplesites': Permission denied
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo rm samplesites 
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo vim samplesites 
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/etc/apache2/sites-available$ sudo apt-get install php5
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  apache2-mpm-prefork libapache2-mod-php5 php5-cli php5-common
+Suggested packages:
+  php-pear php5-suhosin
+The following packages will be REMOVED:
+  apache2-mpm-worker
+The following NEW packages will be installed:
+  apache2-mpm-prefork libapache2-mod-php5 php5 php5-cli php5-common
+0 upgraded, 5 newly installed, 1 to remove and 16 not upgraded.
+Need to get 7,988 kB of archives.
+After this operation, 19.3 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main apache2-mpm-prefork amd64 2.2.22-1ubuntu1.4 [2,398 B]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main php5-common amd64 5.3.10-1ubuntu3.10 [1,797 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libapache2-mod-php5 amd64 5.3.10-1ubuntu3.10 [3,137 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main php5 all 5.3.10-1ubuntu3.10 [1,074 B]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main php5-cli amd64 5.3.10-1ubuntu3.10 [3,051 kB]
+Fetched 7,988 kB in 50s (159 kB/s)                                             
+dpkg: apache2-mpm-worker: dependency problems, but removing anyway as you requested:
+ apache2 depends on apache2-mpm-worker (= 2.2.22-1ubuntu1.4) | apache2-mpm-prefork (= 2.2.22-1ubuntu1.4) | apache2-mpm-event (= 2.2.22-1ubuntu1.4) | apache2-mpm-itk (= 2.2.22-1ubuntu1.4); however:
+  Package apache2-mpm-worker is to be removed.
+  Package apache2-mpm-prefork is not installed.
+  Package apache2-mpm-event is not installed.
+  Package apache2-mpm-itk is not installed.
+(Reading database ... 52930 files and directories currently installed.)
+Removing apache2-mpm-worker ...
+ * Stopping web server apache2                                                  apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+ ... waiting .                                                           [ OK ]
+Selecting previously unselected package apache2-mpm-prefork.
+(Reading database ... 52925 files and directories currently installed.)
+Unpacking apache2-mpm-prefork (from .../apache2-mpm-prefork_2.2.22-1ubuntu1.4_amd64.deb) ...
+Setting up apache2-mpm-prefork (2.2.22-1ubuntu1.4) ...
+ * Starting web server apache2                                                  apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+Selecting previously unselected package php5-common.
+(Reading database ... 52930 files and directories currently installed.)
+Unpacking php5-common (from .../php5-common_5.3.10-1ubuntu3.10_amd64.deb) ...
+Selecting previously unselected package libapache2-mod-php5.
+Unpacking libapache2-mod-php5 (from .../libapache2-mod-php5_5.3.10-1ubuntu3.10_amd64.deb) ...
+Selecting previously unselected package php5.
+Unpacking php5 (from .../php5_5.3.10-1ubuntu3.10_all.deb) ...
+Selecting previously unselected package php5-cli.
+Unpacking php5-cli (from .../php5-cli_5.3.10-1ubuntu3.10_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up php5-common (5.3.10-1ubuntu3.10) ...
+Setting up libapache2-mod-php5 (5.3.10-1ubuntu3.10) ...
+
+Creating config file /etc/php5/apache2/php.ini with new version
+ * Restarting web server apache2                                                apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+ ... waiting apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+Setting up php5 (5.3.10-1ubuntu3.10) ...
+Setting up php5-cli (5.3.10-1ubuntu3.10) ...
+
+Creating config file /etc/php5/cli/php.ini with new version
+update-alternatives: using /usr/bin/php5 to provide /usr/bin/php (php) in auto mode.
+rschlup@ubuntu:/etc/apache2/sites-available$ cd /var/site1
+rschlup@ubuntu:/var/site1$ vim index.html
+rschlup@ubuntu:/var/site1$ sudo vim index.html
+rschlup@ubuntu:/var/site1$ mv index.html index.php
+rschlup@ubuntu:/var/site1$ ls
+index.php
+rschlup@ubuntu:/var/site1$ sudo vim /etc/apache2/sites-available/samplesites
+rschlup@ubuntu:/var/site1$ sudo vim /etc/apache2/sites-available/samplesites
+rschlup@ubuntu:/var/site1$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/var/site1$ ls
+index.php
+rschlup@ubuntu:/var/site1$ sudo vim index.php
+rschlup@ubuntu:/var/site1$ sudo apt-get install mysql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package mysql
+rschlup@ubuntu:/var/site1$ sudo apt-get install mysql-server
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient18
+  libnet-daemon-perl libplrpc-perl libterm-readkey-perl mysql-client-5.5
+  mysql-client-core-5.5 mysql-common mysql-server-5.5 mysql-server-core-5.5
+Suggested packages:
+  libipc-sharedcache-perl tinyca mailx
+The following NEW packages will be installed:
+  libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient18
+  libnet-daemon-perl libplrpc-perl libterm-readkey-perl mysql-client-5.5
+  mysql-client-core-5.5 mysql-common mysql-server mysql-server-5.5
+  mysql-server-core-5.5
+0 upgraded, 13 newly installed, 0 to remove and 16 not upgraded.
+Need to get 27.2 MB of archives.
+After this operation, 97.5 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-common all 5.5.35-0ubuntu0.12.04.2 [13.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libmysqlclient18 amd64 5.5.35-0ubuntu0.12.04.2 [945 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise/main libnet-daemon-perl all 0.48-1 [43.1 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/main libplrpc-perl all 0.2020-2 [36.0 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/main libdbi-perl amd64 1.616-1build2 [849 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ precise/main libdbd-mysql-perl amd64 4.020-1build2 [106 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-client-core-5.5 amd64 5.5.35-0ubuntu0.12.04.2 [1,923 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ precise/main libterm-readkey-perl amd64 2.30-4build3 [28.6 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-client-5.5 amd64 5.5.35-0ubuntu0.12.04.2 [8,292 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-server-core-5.5 amd64 5.5.35-0ubuntu0.12.04.2 [6,073 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-server-5.5 amd64 5.5.35-0ubuntu0.12.04.2 [8,820 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ precise/main libhtml-template-perl all 2.10-1 [65.0 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-server all 5.5.35-0ubuntu0.12.04.2 [11.2 kB]
+Fetched 27.2 MB in 3min 17s (138 kB/s)                                         
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 52978 files and directories currently installed.)
+Unpacking mysql-common (from .../mysql-common_5.5.35-0ubuntu0.12.04.2_all.deb) ...
+Selecting previously unselected package libmysqlclient18.
+Unpacking libmysqlclient18 (from .../libmysqlclient18_5.5.35-0ubuntu0.12.04.2_amd64.deb) ...
+Selecting previously unselected package libnet-daemon-perl.
+Unpacking libnet-daemon-perl (from .../libnet-daemon-perl_0.48-1_all.deb) ...
+Selecting previously unselected package libplrpc-perl.
+Unpacking libplrpc-perl (from .../libplrpc-perl_0.2020-2_all.deb) ...
+Selecting previously unselected package libdbi-perl.
+Unpacking libdbi-perl (from .../libdbi-perl_1.616-1build2_amd64.deb) ...
+Selecting previously unselected package libdbd-mysql-perl.
+Unpacking libdbd-mysql-perl (from .../libdbd-mysql-perl_4.020-1build2_amd64.deb) ...
+Selecting previously unselected package mysql-client-core-5.5.
+Unpacking mysql-client-core-5.5 (from .../mysql-client-core-5.5_5.5.35-0ubuntu0.12.04.2_amd64.deb) ...
+Selecting previously unselected package libterm-readkey-perl.
+Unpacking libterm-readkey-perl (from .../libterm-readkey-perl_2.30-4build3_amd64.deb) ...
+Selecting previously unselected package mysql-client-5.5.
+Unpacking mysql-client-5.5 (from .../mysql-client-5.5_5.5.35-0ubuntu0.12.04.2_amd64.deb) ...
+Selecting previously unselected package mysql-server-core-5.5.
+Unpacking mysql-server-core-5.5 (from .../mysql-server-core-5.5_5.5.35-0ubuntu0.12.04.2_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up mysql-common (5.5.35-0ubuntu0.12.04.2) ...
+Selecting previously unselected package mysql-server-5.5.
+(Reading database ... 53356 files and directories currently installed.)
+Unpacking mysql-server-5.5 (from .../mysql-server-5.5_5.5.35-0ubuntu0.12.04.2_amd64.deb) ...
+Selecting previously unselected package libhtml-template-perl.
+Unpacking libhtml-template-perl (from .../libhtml-template-perl_2.10-1_all.deb) ...
+Selecting previously unselected package mysql-server.
+Unpacking mysql-server (from .../mysql-server_5.5.35-0ubuntu0.12.04.2_all.deb) ...
+Processing triggers for man-db ...
+Processing triggers for ureadahead ...
+Setting up libmysqlclient18 (5.5.35-0ubuntu0.12.04.2) ...
+Setting up libnet-daemon-perl (0.48-1) ...
+Setting up libplrpc-perl (0.2020-2) ...
+Setting up libdbi-perl (1.616-1build2) ...
+Setting up libdbd-mysql-perl (4.020-1build2) ...
+Setting up mysql-client-core-5.5 (5.5.35-0ubuntu0.12.04.2) ...
+Setting up libterm-readkey-perl (2.30-4build3) ...
+Setting up mysql-client-5.5 (5.5.35-0ubuntu0.12.04.2) ...
+Setting up mysql-server-core-5.5 (5.5.35-0ubuntu0.12.04.2) ...
+Setting up mysql-server-5.5 (5.5.35-0ubuntu0.12.04.2) ...
+140314 16:33:01 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+mysql start/running, process 4992
+Setting up libhtml-template-perl (2.10-1) ...
+Setting up mysql-server (5.5.35-0ubuntu0.12.04.2) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+rschlup@ubuntu:/var/site1$ sudo apt-get install phpmyadmin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  dbconfig-common fontconfig-config libfontconfig1 libgd2-xpm libjpeg-turbo8
+  libjpeg8 libmcrypt4 libt1-5 libxpm4 php5-gd php5-mcrypt php5-mysql
+  ttf-dejavu-core
+Suggested packages:
+  libgd-tools libmcrypt-dev mcrypt
+The following NEW packages will be installed:
+  dbconfig-common fontconfig-config libfontconfig1 libgd2-xpm libjpeg-turbo8
+  libjpeg8 libmcrypt4 libt1-5 libxpm4 php5-gd php5-mcrypt php5-mysql
+  phpmyadmin ttf-dejavu-core
+0 upgraded, 14 newly installed, 0 to remove and 16 not upgraded.
+Need to get 8,254 kB of archives.
+After this operation, 23.3 MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main ttf-dejavu-core all 2.33-2ubuntu1 [1,552 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main fontconfig-config all 2.8.0-3ubuntu9.1 [44.4 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libfontconfig1 amd64 2.8.0-3ubuntu9.1 [125 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libjpeg-turbo8 amd64 1.1.90+svn733-0ubuntu4.3 [111 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/main libjpeg8 amd64 8c-2ubuntu7 [2,112 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ precise/main libxpm4 amd64 1:3.5.9-4 [37.0 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ precise/main libgd2-xpm amd64 2.0.36~rc1~dfsg-6ubuntu2 [202 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ precise/main dbconfig-common all 1.8.47 [458 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ precise/universe libmcrypt4 amd64 2.5.8-3.1 [87.6 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ precise/main libt1-5 amd64 5.1.2-3.4ubuntu1 [158 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main php5-gd amd64 5.3.10-1ubuntu3.10 [38.8 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ precise/universe php5-mcrypt amd64 5.3.5-0ubuntu1 [18.7 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main php5-mysql amd64 5.3.10-1ubuntu3.10 [77.1 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ precise/universe phpmyadmin all 4:3.4.10.1-1 [5,343 kB]
+Fetched 8,254 kB in 3s (2,275 kB/s)      
+Preconfiguring packages ...
+Selecting previously unselected package ttf-dejavu-core.
+(Reading database ... 53457 files and directories currently installed.)
+Unpacking ttf-dejavu-core (from .../ttf-dejavu-core_2.33-2ubuntu1_all.deb) ...
+Selecting previously unselected package fontconfig-config.
+Unpacking fontconfig-config (from .../fontconfig-config_2.8.0-3ubuntu9.1_all.deb) ...
+Selecting previously unselected package libfontconfig1.
+Unpacking libfontconfig1 (from .../libfontconfig1_2.8.0-3ubuntu9.1_amd64.deb) ...
+Selecting previously unselected package libjpeg-turbo8.
+Unpacking libjpeg-turbo8 (from .../libjpeg-turbo8_1.1.90+svn733-0ubuntu4.3_amd64.deb) ...
+Selecting previously unselected package libjpeg8.
+Unpacking libjpeg8 (from .../libjpeg8_8c-2ubuntu7_amd64.deb) ...
+Selecting previously unselected package libxpm4.
+Unpacking libxpm4 (from .../libxpm4_1%3a3.5.9-4_amd64.deb) ...
+Selecting previously unselected package libgd2-xpm.
+Unpacking libgd2-xpm (from .../libgd2-xpm_2.0.36~rc1~dfsg-6ubuntu2_amd64.deb) ...
+Selecting previously unselected package dbconfig-common.
+Unpacking dbconfig-common (from .../dbconfig-common_1.8.47_all.deb) ...
+Selecting previously unselected package libmcrypt4.
+Unpacking libmcrypt4 (from .../libmcrypt4_2.5.8-3.1_amd64.deb) ...
+Selecting previously unselected package libt1-5.
+Unpacking libt1-5 (from .../libt1-5_5.1.2-3.4ubuntu1_amd64.deb) ...
+Selecting previously unselected package php5-gd.
+Unpacking php5-gd (from .../php5-gd_5.3.10-1ubuntu3.10_amd64.deb) ...
+Selecting previously unselected package php5-mcrypt.
+Unpacking php5-mcrypt (from .../php5-mcrypt_5.3.5-0ubuntu1_amd64.deb) ...
+Selecting previously unselected package php5-mysql.
+Unpacking php5-mysql (from .../php5-mysql_5.3.10-1ubuntu3.10_amd64.deb) ...
+Selecting previously unselected package phpmyadmin.
+Unpacking phpmyadmin (from .../phpmyadmin_4%3a3.4.10.1-1_all.deb) ...
+Processing triggers for man-db ...
+Processing triggers for libapache2-mod-php5 ...
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+Setting up ttf-dejavu-core (2.33-2ubuntu1) ...
+Setting up fontconfig-config (2.8.0-3ubuntu9.1) ...
+Setting up libfontconfig1 (2.8.0-3ubuntu9.1) ...
+Setting up libjpeg-turbo8 (1.1.90+svn733-0ubuntu4.3) ...
+Setting up libjpeg8 (8c-2ubuntu7) ...
+Setting up libxpm4 (1:3.5.9-4) ...
+Setting up libgd2-xpm (2.0.36~rc1~dfsg-6ubuntu2) ...
+Setting up dbconfig-common (1.8.47) ...
+
+Creating config file /etc/dbconfig-common/config with new version
+Setting up libmcrypt4 (2.5.8-3.1) ...
+Setting up libt1-5 (5.1.2-3.4ubuntu1) ...
+Setting up php5-gd (5.3.10-1ubuntu3.10) ...
+Setting up php5-mcrypt (5.3.5-0ubuntu1) ...
+Setting up php5-mysql (5.3.10-1ubuntu3.10) ...
+Setting up phpmyadmin (4:3.4.10.1-1) ...
+dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf
+
+Creating config file /etc/dbconfig-common/phpmyadmin.conf with new version
+
+Creating config file /etc/phpmyadmin/config-db.php with new version
+granting access to database phpmyadmin for phpmyadmin@localhost: success.
+verifying access for phpmyadmin@localhost: success.
+creating database phpmyadmin: success.
+verifying database phpmyadmin exists: success.
+populating database via sql...  done.
+dbconfig-common: flushing administrative password
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+rschlup@ubuntu:/var/site1$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/var/site1$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/var/site1$ ls
+index.php
+rschlup@ubuntu:/var/site1$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/var/site1$ cd /
+rschlup@ubuntu:/$ ls
+bin   etc         lib         media  proc  sbin     sys  var
+boot  home        lib64       mnt    root  selinux  tmp  vmlinuz
+dev   initrd.img  lost+found  opt    run   srv      usr
+rschlup@ubuntu:/$ cd /etc/apache2
+rschlup@ubuntu:/etc/apache2$ ls
+apache2.conf  envvars     magic           mods-enabled  sites-available
+conf.d        httpd.conf  mods-available  ports.conf    sites-enabled
+rschlup@ubuntu:/etc/apache2$ ls -l
+total 72
+-rw-r--r-- 1 root root  8346 Feb  6  2012 apache2.conf
+drwxr-xr-x 2 root root  4096 Mar 14 15:15 conf.d
+-rw-r--r-- 1 root root  1322 Feb  6  2012 envvars
+-rw-r--r-- 1 root root     0 Mar 14 15:15 httpd.conf
+-rw-r--r-- 1 root root 31063 Feb  6  2012 magic
+drwxr-xr-x 2 root root  4096 Mar 14 16:12 mods-available
+drwxr-xr-x 2 root root  4096 Mar 14 16:12 mods-enabled
+-rw-r--r-- 1 root root   750 Feb  6  2012 ports.conf
+drwxr-xr-x 2 root root  4096 Mar 14 16:22 sites-available
+drwxr-xr-x 2 root root  4096 Mar 14 15:52 sites-enabled
+rschlup@ubuntu:/etc/apache2$ cd conf.d
+rschlup@ubuntu:/etc/apache2/conf.d$ ls
+charset  localized-error-pages  other-vhosts-access-log  security
+rschlup@ubuntu:/etc/apache2/conf.d$ ls -l
+total 16
+-rw-r--r-- 1 root root  269 Feb  6  2012 charset
+-rw-r--r-- 1 root root 3296 Feb  6  2012 localized-error-pages
+-rw-r--r-- 1 root root  143 Feb  6  2012 other-vhosts-access-log
+-rw-r--r-- 1 root root 1424 Feb  6  2012 security
+rschlup@ubuntu:/etc/apache2/conf.d$ sudo apt-get install phpmyadmin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+phpmyadmin is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 16 not upgraded.
+rschlup@ubuntu:/etc/apache2/conf.d$ sudo dpkg-reconfigure phpmyadmin
+dbconfig-common: writing config to /etc/dbconfig-common/phpmyadmin.conf
+Replacing config file /etc/phpmyadmin/config-db.php with new version
+granting access to database phpmyadmin for phpmyadmin@localhost: already exists.
+creating database phpmyadmin: already exists.
+populating database via sql...  done.
+dbconfig-common: flushing administrative password
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/etc/apache2/conf.d$ sudo service apache2 reload
+ * Reloading web server config apache2                                          apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+                                                                         [ OK ]
+rschlup@ubuntu:/etc/apache2/conf.d$ 

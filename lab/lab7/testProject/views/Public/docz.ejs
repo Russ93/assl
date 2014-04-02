@@ -1,0 +1,27 @@
+<!-- Default home page -->
+<div id='pop'></div>
+<nav class='small-12 columns'>
+	<ul>
+		<li class='small-4 columns'>
+			<img style='float: left' src="/images/logo.png" id="logo" />
+			<h2 class='small-8 columns'>Doc Love</h2>
+		</li>
+		<li class='small-2 columns fill'></li>
+		<li class='small-6 columns'>
+			<h2 class='small-10 columns fill'><%=name %></h2>
+			<a href='/User/signout' class='small-2 columns fill lout' >Log Out</a>
+		</li>
+	</ul>
+</nav>
+<aside class='small-3 columns'>
+	<ul class='small-12 columns'>
+		<li id='login class='small-12 columns''>
+			<h2> Sign In to create documents</h2>
+		</li>
+	</ul>
+</aside>
+<section class='app small-9 columns'>
+<input id='header' type="text" class='small-12 columns' value="<%=doc.header %>" docId="<%=doc.id %>" />
+<textarea class='small-12 columns'><%=doc.cont %></textarea>
+</section>
+<script src="http://plugins.learningjquery.com/textchildren/jquery.textchildren.js"></script>

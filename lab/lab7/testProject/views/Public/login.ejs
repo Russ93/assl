@@ -1,0 +1,28 @@
+<!-- Default home page -->
+<div id="pop">
+<div id="out"></div>
+    <form id="up" action="/login" method="post" class="small-6 large-centered columns">
+        <h2 class='error'><%=error %></h2>
+        <label>Username</label><input type="text" name="username" value='<%=user %>'>
+        <label>Password</label><input type="text" name="password" value='<%=pass %>'>
+        <button>Log In</button>
+    </form>
+</div>
+<nav class='small-12 columns'>
+    <ul>
+        <li class='small-4 columns'>
+            <img columns' style='float: left' src="/images/logo.png" id="logo" />
+            <h2 class='small-8 columns'>Doc Love</h2>
+        </li>
+        <li class='small-6 columns fill'></li>
+        <li id='login' class='small-1 columns log'>Login</li>
+    </ul>
+</nav>
+<section id="cta" class='small-6 large-centered columns'>
+    <h1>Start Remembering</h1>
+    <p>This app will make modern note taking obsolete and make modern life a bit more manageable by allowing to take note of everything and never lose information</p>
+    <span>Create a free account</span>
+    <form action='/signup' method='post' id='signup'>
+        <input type="text" name='name' placeholder="Full Name" />
+    </form>
+</section>

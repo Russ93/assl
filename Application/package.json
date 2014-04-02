@@ -1,0 +1,26 @@
+{
+	"name": "go-docs",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "admin",
+			"email": "russ93@fullsail.edu"
+		}
+	],
+	"dependencies": {
+		"async": "0.2.9",
+		"hashids": "*",
+		"connect": "2.12.0",
+		"connect-mongo": "0.4.0",
+		"cookie": "*",
+		"ejs": "*",
+		"express": "3.4.7",
+		"mongojs": "*",
+		"node-uuid": "*"
+	},
+	"devDependencies": {
+		"mocha": "1.15.1",
+		"should": "2.1.1",
+		"supertest": "0.8.2"
+	}
+}
